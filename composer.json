@@ -1,0 +1,16 @@
+{
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpmd/phpmd": "^2.8",
+        "phpunit/phpunit": "^8.5"
+    },
+    "scripts": {
+        "test": "phpdbg -qrr -b vendor/bin/phpunit",
+        "test-ci": "phpdbg -qrr -b vendor/bin/phpunit --coverage-text --colors=never",
+        "coverage": "phpdbg -qrr -dmemory_limit=2G vendor/bin/phpunit --coverage-html coverage && open coverage/index.html",
+        "cs": "vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php_cs.dist --using-cache=no -v --ansi",
+        "cs-fix": "vendor/bin/php-cs-fixer fix --config=.php_cs.dist --using-cache=no -v --ansi",
+        "phpmd": "vendor/bin/phpmd app text phpmd.xml",
+        "ci": "composer test && composer cs && composer phpmd"
+    }
+}

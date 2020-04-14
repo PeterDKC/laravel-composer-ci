@@ -1,22 +1,3 @@
-# Laravel Composer ci
-
-Snippets to quickly stand up PHPUnit Tests, PHPMD, and php-cs-fixer for local development + CI/CD in a Laravel project.
-
-## Usage
-
-This is basically a copy-paste dump for files and snippets.
-
-1. Make sure you've installed the latest stable versions of the 3 composer packages listed in `composer.json`
-2. Add the `scripts` section contents to your existing `scripts` in `composer.json`
-3. Copy paste the following files into your repo at root level and adjust / tweak as needed:
-  - `.php_cs.dist`
-  - `phpmd.xml`
-  - `phpunit.xml`
-
-## Readme contents
-
-Feel free to copy paste the contents of `README_SAMPLE.md` Following are said contents in readable form.
-
 ## Unit tests, code coverage, and more
 
 ### Continuous Integration
